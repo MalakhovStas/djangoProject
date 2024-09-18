@@ -1,0 +1,44 @@
+{% load static %}
+
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список продуктов</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <form id="add-product" method="post">
+    <label for="add-product" style="font-weight: bold; font-size: large; text-align: center">Форма добавления продукта</label>
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Добавить продукт">
+    </form>
+
+    <table>
+      <caption>Список продуктов</caption>
+        
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Название</th>
+          <th>Описание</th>
+          <th>Цена</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</body>
+<footer></footer>
+</html>
