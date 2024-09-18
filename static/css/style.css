@@ -1,0 +1,85 @@
+table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+td:nth-child(1) {
+  width: 30px;
+}
+
+td:nth-child(2) {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td:nth-child(3) {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td:nth-child(4) {
+  width: 50px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+caption {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: large;
+}
+
+#add-product {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#add-product label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#add-product input[type="text"],
+#add-product textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-product input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#add-product input[type="submit"]:hover {
+  background-color: #45a049;
+}
